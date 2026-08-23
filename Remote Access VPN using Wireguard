@@ -1,0 +1,16 @@
+Wireguard Client
+- Assigned the VPN Client 172.16.11.253/24
+- Set endpoint to Public IP address and port number
+- Added the wireguard server public key to peer
+Wireguard Server
+- Created a tunnel network 172.16.11.0/24
+- Assigned the VPN Server 172.16.11.254/24
+- Added wireguard client public key to peer (whitelist device)
+Server Computer (Win11 Home)
+- Created Windows Firewall rule inbound allowing port 51820
+- Created Windows Firewall rule inbound allowing traffic on VPN network 172.16.11.0/24
+- Created Windows Firewall rule outbound allowing traffic on VPN network 172.16.11.0/24
+- Ran powershell command “IPEnableRouter” to change registry allowing forwarding on Windows Home
+Router
+- Port forward port 51820 on router to IP of Wireguard server 10.0.0.19
+- Create a static route to VPN tunnel and route using Server IP as default gateway. ex 172.16.11.0 > 10.0.0.19
