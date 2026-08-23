@@ -1,0 +1,3 @@
+Confirm that client system and AD server are on the same network (VPN or physically)
+Set the DNS of the client system to the IP address of AD server
+Open system properties and change domain group, add the domain of AD
