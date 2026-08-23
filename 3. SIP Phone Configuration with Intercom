@@ -1,0 +1,16 @@
+SW
+- Created a Voice VLAN (VLAN4) for network 172.16.10.0/24, assigning SW 172.16.10.254
+- Created a Corporate VLAN (VLAN3) for main network 10.0.0.0/24, assigning SW 10.0.0.254
+- Connected IP phone and intercom to Switchport (port 15 and 16)
+- Assigned port 15(intercom) to VLAN 4
+- Configured port 16 on VLAN3, with voice VLAN on 4
+- Enabled LLDP globally and for switchport 15 and 16
+IP Phone
+- Assigned an IP address on IP phone 172.16.10.2/24
+- Created a VOIP server on the IP phone (10)
+Intercom
+- Assigned an IP address on Intercom 172.16.10.3/24
+- Added the IP phone as the recipient, using sip:10@172.16.10.2
+PC
+- Connected to PC port on IP phone
+- Set computer to DHCP, pulled an IP address from main network 10.0.0.5/24
