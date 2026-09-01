@@ -10,3 +10,49 @@ Installed Kubernetes with kubectl and Minikube, to run locally
 - Created a services.yaml, specifying the Nodeport used during the install, pointed minikube to runfile
 - Verified pod is running via kubectl get pod and kubectl get services, minikube service mywebsite --url command
 - Can scale using kubectl scale deployment mywebsite --replicas=2
+
+
+
+services.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: orange
+spec:
+  selector:
+    app: orange
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+      nodePort: 30080
+  type: NodePort
+
+deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orange
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orange
+  template:
+    metadata:
+      labels:
+        app: orange
+    spec:
+      containers:
+        - name: orange
+          image: orange
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 500m
