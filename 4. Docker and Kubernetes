@@ -1,0 +1,12 @@
+Installed Docker
+- Created a test HTML file, named file index.html
+- Created a document called Dockerfile, pointing to the HTML file location
+- Verified container is running via docker ps and docker image ls command
+- Confirmed website is running by navigating to localIP: 127.0.0.1:80
+Installed Kubernetes with kubectl and Minikube, to run locally
+- Tied Minikube to work with docker, specified what internal port to use.
+  - minikube start --driver=docker --ports=30080:30080
+- Created a deployment.yaml file, to point to docker file, pointed minikube to runfile
+- Created a services.yaml, specifying the Nodeport used during the install, pointed minikube to runfile
+- Verified pod is running via kubectl get pod and kubectl get services, minikube service mywebsite --url command
+- Can scale using kubectl scale deployment mywebsite --replicas=2
