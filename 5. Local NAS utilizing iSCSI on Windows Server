@@ -1,0 +1,10 @@
+Windows Server Manager
+- Installed iSCSI target server from Windows roles and features
+  - Walked through initial setup Wizard
+  - Configured virtual storage location
+  - Named iSCSI virtual disk
+  - Configured storage size and type
+- Opened iSCSI initiator to point to iSCSI target created
+Windows Disk Management
+- Formatted the drive, created a volume
+- Enabled “Share this folder” from Windows settings
