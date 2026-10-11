@@ -1,0 +1,12 @@
+JAMF
+- Created a blueprint, assigned group permission, security settings, and default apps 
+- Configured Apple Push Notification service
+  - Downloaded certificate provided by JAMF account
+  - Uploaded certificate to Apple Push Certificates portal
+  - Downloaded apple generated, Apple Push Certificates, which is valid for 1 year
+Enabled Open enrollment
+- This generated a QR code, created an access code for device onboarding
+- Scanned QR code on iPhone device, prompts to add to MDM site
+- Successfully added iOS device to JAMF, displays on devices list
+Add teammate
+- Added email to invite secondary admin
