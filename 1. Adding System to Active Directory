@@ -1,3 +1,8 @@
-Confirm that client system and AD server are on the same network (VPN or physically)
-Set the DNS of the client system to the IP address of AD server
-Open system properties and change domain group, add the domain of AD
+AD Controller
+- Confirm user exists in the AD, if not create user and credentials
+- Confirmed PC was added succesfully to AD from domain controller
+
+Client System
+- Confirm that client system and AD server are on the same network (VPN or physically)
+- Set the DNS of the client system to the IP address of AD server
+- Open system properties and change domain group, add the domain of AD
